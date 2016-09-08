@@ -115,6 +115,49 @@ grab the installer from the
 [Python downloads page](https://www.python.org/downloads/)
 and install it on your machine.
 
+Let's discuss your development environment
+for a moment.
+At this point,
+your machine should have Python installed on it.
+An installation of Python is, in reality, at least two things.
+The core part is the interpreter
+that can run code.
+The secondary part is a massive standard library
+of additional code
+that can help you do cool stuff.
+This library of code helps
+so that you don't have to write all the tools yourself.
+One of Python's mottos is "batteries included,"
+and the standard library is the batteries.
+
+But the internet is full of *even more* cool stuff.
+People from all over the world contribute additional code
+that won't fit in the standard library.
+This code is "packaged" into packages
+that we can install on our machines.
+Python provides a tool to get access to those packages.
+That tool is
+[pip](https://pip.pypa.io/en/stable/).
+
+Before moving on to using `pip`,
+there is one more thing to consider.
+When Python was installed,
+your operating system
+(a.k.a. Windows, OS X, or Linux)
+put the Python files
+in a special location
+on your machine.
+That installation may have required special administrative privileges
+to work.
+When adding packages
+from the internet
+with `pip`,
+we want to avoid needing those privileges.
+We want a sandbox
+where our extra packages can live
+without interferring with other parts
+of the operating system.
+
 TODO: pip
 TODO: venv
 
@@ -122,6 +165,13 @@ TODO: venv
 
 TODO: Nexmo
 TODO: dependencies
+
+## Optional side quest: add version control to your project
+
+You should know of an important concept called version control.
+Version control is a safety net if you mess up badly.
+
+TODO: teach the merits of version control and direct to GitHub
 
 ## Intro to APIs
 
