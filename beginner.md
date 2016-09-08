@@ -68,6 +68,25 @@ Download it from the
 [Sublime Text website](https://www.sublimetext.com/)
 and install it on your machine.
 
+## The terminal
+
+TODO: introduce a terminal.
+
+## A home for your code
+
+To get started,
+let's make a place
+where our code can reside.
+Create a directory
+with whatever name you want.
+For this guide,
+we'll call our project `hackathon`.
+
+```bash
+$ mkdir hackathon
+$ cd hackathon
+```
+
 ## Setup Python
 
 All the code for this project
