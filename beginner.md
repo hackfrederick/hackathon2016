@@ -8,9 +8,9 @@ required to make a functioning code project.
 ## Goal and overview
 
 *Coding is the superpower of the 21st century.*
+
 Our goal with this project is
 to get you hands on experience with real code.
-
 The project should demonstrate
 how you can obtain this modern superpower
 and apply it to your work, your learning, or your play.
@@ -32,7 +32,7 @@ fiber optic cables,
 and wireless signals
 to arrive specially packaged...
 for you.
-Isn't that amazing!?
+*Isn't that amazing!?*
 We think so.
 
 Let's get started, ok?
@@ -70,7 +70,32 @@ and install it on your machine.
 
 ## Setup Python
 
-TODO: Python 3
+All the code for this project
+will use the Python programming language.
+Python is an interpreted language.
+This means that Python code
+is given to an interpreter program,
+and that program interprets (go figure!) the instructions
+and runs them.
+In contrast,
+a language like C++ is considered a compiled language.
+With a compiled language,
+the code is given to a compiler program
+which converts the code into a machine readable file
+(that is, another program).
+The distinction isn't very important for this project.
+Practically,
+it means that we don't have an extra step
+of putting our code through a compiler first.
+We get to run the code directly.
+
+We're going to use Python 3.5.2.
+There are a variety of ways to install Python.
+If you don't already have Python installed,
+grab the installer from the
+[Python downloads page](https://www.python.org/downloads/)
+and install it on your machine.
+
 TODO: pip
 TODO: venv
 
