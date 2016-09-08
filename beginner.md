@@ -1,17 +1,22 @@
 # Beginner track
 
-This pages shows a project
-that is aimed at beginner's.
+This page shows a project
+that is aimed at beginners.
 It will carefully walk through the steps
-required to make a functioning project.
+required to make a functioning code project.
+
+## Goal and overview
+
+TODO
 
 ## Get ready to write code
 
 We write code in a plain text format.
-This has a very specific meaning for computers.
-To write in plain text,
+This has a very specific meaning for computers,
+but suffice it to say
+that to write in plain text,
 we need a text editor.
-If you known Windows,
+If you know Windows,
 Notepad is a text editor.
 Microsoft Word is not a text editor;
 it is a word processor,
