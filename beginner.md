@@ -5,6 +5,15 @@ that is aimed at beginners.
 It will carefully walk through the steps
 required to make a functioning code project.
 
+With this whole event,
+please know that the organizers are here
+to help people learn.
+Learning tends to work best
+when you think hard
+about the problem at hand,
+but if you truly get stuck,
+let us know!
+
 ## Goal and overview
 
 *Coding is the superpower of the 21st century.*
@@ -82,6 +91,11 @@ These are all (roughly) the same thing.
 A terminal is a text based interface
 where you type commands
 that instruct your computer about what to do.
+
+If you can't find the terminal
+on your machine,
+find an organizer to help
+or ask a neighbor.
 
 This guide will use a Linux style terminal
 when showing examples.
@@ -188,8 +202,38 @@ where our extra packages can live
 without interferring with other parts
 of the operating system.
 
-TODO: pip
-TODO: venv
+In Python-land,
+these sandboxes are called virtual environments
+(to maximize the amount of jargon to learn :smile:).
+Modern versions of Python include `pyvenv`,
+a tool to create virtual environments.
+Let's make one.
+
+```bash
+$ pyvenv venv
+```
+
+There should be a new directory, `venv`,
+in your project area
+that is full of stuff.
+Before the terminal will use that virtual environment,
+you must activate it.
+
+```bash
+$ source venv/bin/activate
+```
+
+Windows users can activate their virtual environment
+using a different command.
+Check out the
+[Python venv documentation](https://docs.python.org/3/library/venv.html#creating-virtual-environments)
+for details.
+
+Note:
+some commands will differ
+between Windows and OS X and Linux.
+Where the differences are large,
+we will try to call them out.
 
 ## Setup project
 
