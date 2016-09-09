@@ -68,9 +68,39 @@ Download it from the
 [Sublime Text website](https://www.sublimetext.com/)
 and install it on your machine.
 
-## The terminal
+## Running commands
 
-TODO: introduce a terminal.
+We need a way to tell the computer what to do.
+To provide these instructions,
+we'll use a program called a terminal.
+A terminal goes by many names.
+You might have heard of
+a command line interface (CLI),
+command prompt,
+or a shell.
+These are all (roughly) the same thing.
+A terminal is a text based interface
+where you type commands
+that instruct your computer about what to do.
+
+This guide will use a Linux style terminal
+when showing examples.
+A Linux style often uses a `$`
+at the beginning of a line.
+When you see these examples,
+you do not need to type the `$`.
+Here's a sample:
+
+```bash
+$ echo 'Hello World!'
+Hello World!
+```
+
+That command told the computer
+to repeat the content inside the quotation marks.
+
+You will see a variety of different commands
+by following this project.
 
 ## A home for your code
 
