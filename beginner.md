@@ -247,9 +247,30 @@ if you would like.
 ## Setup project
 
 We need some weather data to use.
-There are *tons*
+There are *tons* of weather data services,
+and [OpenWeatherMap](http://openweathermap.org/)
+is the service we selected.
+This service is free
+for the amount of data we plan to fetch from the site.
+
+To use their data,
+you must create an account through their website.
+
 TODO: Nexmo
-TODO: dependencies
+
+All the data that we are receiving and sending
+is going over the internet.
+There is a very nice package
+that is not part of the standard library
+that will make our efforts much easier.
+The package,
+[requests](http://requests.readthedocs.io/en/master/),
+will help us get and send on the internet.
+Install it with `pip`.
+
+```bash
+$ pip install requests
+```
 
 ## Intro to APIs
 
