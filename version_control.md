@@ -2,10 +2,35 @@
 
 You should know of an important concept called version control.
 Version control is a safety net if you mess up badly.
+If you use a version control tool,
+it can show you what has changed
+in your project
+and give you the ability undo any mistakes.
 
-TODO: teach the merits of version control and direct to GitHub
-TODO: create GitHub account
-TODO: set up Git config
+The most popular version control tool is Git.
+[Git](https://git-scm.com/)
+is used by legions of open source projects.
+
+To set up Git,
+check out
+[this setup article](https://help.github.com/articles/set-up-git/)
+on GitHub.
+And since we're mentioning GitHub
+(and you're probably reading this on GitHub),
+you should know a little about it.
+GitHub is the most popular place to store Git repositories
+on the internet.
+You should create a GitHub account
+if you don't have one.
+After showing you a little about Git,
+we'll provide some instructions
+for connecting your project to your GitHub account.
+
+From your project directory,
+the following command will tell Git
+that your project should be a repository.
+Once you have a repository,
+Git commands will work on your code.
 
 ```bash
 $ git init .
