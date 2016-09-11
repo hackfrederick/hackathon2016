@@ -244,7 +244,7 @@ Read about
 [adding version control](version_control.md)
 if you would like.
 
-## Setup project
+## Set up project
 
 We need some weather data to use.
 There are *tons* of weather data services,
@@ -274,8 +274,140 @@ $ pip install requests
 
 ## Intro to APIs
 
+You ready to write some code?
+We've finally arrived.
+With all of the setup complete,
+we can get to the task at hand.
+
+When working with OpenWeatherMap and Nexmo,
+we will use APIs.
+API is short for Application Programming Interface.
+An API describes how code can interact
+with external services
+and collect or send data.
+
+We can start
+by looking at the
+[OpenWeatherMap API](http://openweathermap.org/current).
+
+The page tells us
+that we can get the current weather
+by doing a web request to something like:
+`api.openweathermap.org/data/2.5/weather?q=London,uk`
+
+There are two things to note about this:
+
+1. The documentation fails to tell us
+   to include `http://`
+   in front of the request.
+   This is something experienced developers
+   are likely to know,
+   but it can bite somebody new to coding.
+   HTTP stands for Hypertext Transfer Protocol
+   and is the most common protocol used to exchange information
+   over the internet.
+2. What's the deal with `q`?
+   In this case,
+   `q` is short for "query"
+   so this example request is asking
+   "what is the current weather in London, UK?"
+
+Can we get an answer?
+Start by creating a file in your project directory
+named `weather_service.py`.
+
+```bash
+$ touch weather_service.py
+```
+
+Open that file in Sublime.
+It should be empty.
+The first thing to do is to tell Python
+that we want to use the `requests` package
+that we installed.
+
+```python
+# This is a comment (which is a line that Python will ignore
+# when running). A comment is any line that starts with a #.
+# You can use comments to explain things in your code.
+# For instance, this file is weather_service.py.
+
+import requests
+```
+
+Next, let's tell `requests` to get the data
+from the internet.
+
+```python
+response = requests.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk')
+```
+
+Now we can run that code.
+
+```bash
+$ python weather_service.py
+```
+
+What!?
+Nothing happened.
+Yep,
+something did happen,
+but we did not see the results.
+The command that we ran
+told the Python interpreter
+to read the code in `weather_service.py`
+and run those instructions.
+Assuming we typed everything correctly,
+`requests` went out to the internet,
+got an answer from OpenWeatherMap,
+and stored it in `response`.
+The problem is that we didn't tell Python
+to show us the results.
+For that,
+we can use `print`.
+Add a `print` to the bottom of the file.
+
+```python
+print(response.text)
+```
+
+Try it again.
+
+```bash
+$ python weather_service.py
+{"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}
+```
+
+Huh?
+That doesn't look like weather data.
+An important lesson
+in this process
+is that coding is about taking small steps.
+Each little step reveals some new part
+of the puzzle.
+We'll get to an answer soon enough.
+That FAQ page says
+we need to use `APPID` for access.
+The `APPID` is the key
+you can find at
+[your account's API key page](https://home.openweathermap.org/api_keys).
+
+Now we can change our code to use that key.
+
+```python
+response = requests.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=<your API key here>')
+```
+
+Try again:
+
+```bash
+$ python weather_service.py
+{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":286.42,"pressure":1015,"humidity":63,"temp_min":283.15,"temp_max":290.15},"visibility":10000,"wind":{"speed":2.1,"deg":190},"clouds":{"all":0},"dt":1473629602,"sys":{"type":1,"id":5091,"message":0.0423,"country":"GB","sunrise":1473571860,"sunset":1473618079},"id":2643743,"name":"London","cod":200}
+```
+
+**Sweet success!**
+
 TODO: Nexmo
-TODO: weather
 
 ## Connecting things together
 
