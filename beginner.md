@@ -284,7 +284,7 @@ we will use APIs.
 API is short for Application Programming Interface.
 An API describes how code can interact
 with external services
-and collect or send data.
+to collect or send data.
 
 ### OpenWeatherMap
 
@@ -606,7 +606,38 @@ params = {
 }
 ```
 
-Let's switch gears
+```bash
+$ python weather_service.py
+{'base': 'cmc stations',
+ 'clouds': {'all': 5},
+ 'cod': 200,
+ 'coord': {'lat': 39.41, 'lon': -77.41},
+ 'dt': 1473642249,
+ 'id': 4355585,
+ 'main': {'humidity': 73,
+          'pressure': 1020,
+          'temp': 70.3,
+          'temp_max': 77,
+          'temp_min': 64.76},
+ 'name': 'Frederick',
+ 'sys': {'country': 'US',
+         'id': 1330,
+         'message': 0.0105,
+         'sunrise': 1473677315,
+         'sunset': 1473722526,
+         'type': 1},
+ 'weather': [{'description': 'clear sky',
+              'icon': '02n',
+              'id': 800,
+              'main': 'Clear'}],
+ 'wind': {'speed': 3.36}}
+```
+
+That's way better.
+70.3F and clear skies!
+What am I doing inside writing this guide!? :wink:
+
+Now let's switch gears
 and take a close look at the Nexmo API.
 
 ### Nexmo
