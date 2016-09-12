@@ -286,6 +286,8 @@ An API describes how code can interact
 with external services
 and collect or send data.
 
+### OpenWeatherMap
+
 We can start
 by looking at the
 [OpenWeatherMap API](http://openweathermap.org/current).
@@ -398,14 +400,216 @@ Now we can change our code to use that key.
 response = requests.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=<your API key here>')
 ```
 
-Try again:
+Try again.
 
 ```bash
 $ python weather_service.py
-{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":286.42,"pressure":1015,"humidity":63,"temp_min":283.15,"temp_max":290.15},"visibility":10000,"wind":{"speed":2.1,"deg":190},"clouds":{"all":0},"dt":1473629602,"sys":{"type":1,"id":5091,"message":0.0423,"country":"GB","sunrise":1473571860,"sunset":1473618079},"id":2643743,"name":"London","cod":200}
+{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky",
+"icon":"01n"}],"base":"stations","main":{"temp":286.42,"pressure":1015,"humidity":63,"temp_min":283.15,
+"temp_max":290.15},"visibility":10000,"wind":{"speed":2.1,"deg":190},"clouds":{"all":0},"dt":1473629602,
+"sys":{"type":1,"id":5091,"message":0.0423,"country":"GB","sunrise":1473571860,"sunset":1473618079},
+"id":2643743,"name":"London","cod":200}
 ```
 
 **Sweet success!**
+
+We now have some data
+from OpenWeatherMap,
+but there is some good opportunity
+for clean up
+before we move on.
+We are going to do something
+that developers like to call "refactoring."
+Refactoring involves making changes to code
+without changing the behavior
+(that is, the outcome).
+Look at the web address
+of the request.
+It's kind of unwieldy.
+The web address,
+which is also known as a URL,
+has a well defined format.
+Everything after the `?` character
+are called parameters.
+Because many APIs deal with parameters,
+`requests` provides a nicer way
+of handling them in your code.
+We can change the code to look like the following:
+
+```python
+params = {
+    'q': 'London,uk',
+    'appid': '<your API key here>',
+}
+response = requests.get('http://api.openweathermap.org/data/2.5/weather', params=params)
+```
+
+If you run this again,
+you can see that this code is functionally the same as the original.
+This clean up is nice
+because we now have one place
+that can add more parameters
+without the URL growing to be a mile long.
+
+That `params` that you made is Python dictionary.
+Think of a Python dictionary
+like you would think of a regular dictionary.
+With a dictionary,
+you look up a word
+and find its definition.
+With a Python dictionary,
+you look up a `key`
+and find its `value`.
+In `params`,
+`q` and `appid` are the keys,
+and `London,uk` and `<your API key here>` are the values.
+Python dictionaries are a very useful way to store data
+in your code.
+
+Time to think about the output.
+That mess of data that we saw
+certainly had important information in it,
+but it was a pain to decipher.
+What was saw was the raw data
+that came in the response.
+Maybe you noticed
+that the data had some patterns
+and repeating characters in it.
+What is that?
+That is
+[JSON](http://json.org/).
+JSON is a format
+used by many APIs
+that structures data
+in an approachable way.
+One way we can think of JSON is as a dictionary.
+In fact,
+`requests` let's us do exactly that.
+Change your `print` statement
+to the following:
+
+```python
+print(response.json())
+```
+
+Let's look at the output now:
+
+```bash
+$ python weather_service.py
+{'cod': 200, 'weather': [{'main': 'Clear', 'description': 'clear sky', 'icon': '01n', 'id': 800}],
+ 'id': 2643743, 'name': 'London', 'dt': 1473640478, 'sys': {'country': 'GB', 'type': 1,
+ 'sunrise': 1473658272, 'message': 0.0105, 'sunset': 1473704462, 'id': 5091}, 'wind': {'speed':
+ 2.1, 'deg': 120}, 'clouds': {'all': 0}, 'coord': {'lon': -0.13, 'lat': 51.51}, 'main':
+ {'temp_min': 282.04, 'temp': 286.06, 'humidity': 72, 'pressure': 1015, 'temp_max': 291.15},
+ 'base': 'cmc stations'}
+```
+
+What we see still doesn't look very good.
+Rest assured,
+it is different.
+Previously,
+we were looking at the raw data
+from OpenWeatherMap.
+When we switched to using `json()`,
+we told `requests` to convert the data
+into a Python dictionary.
+It might help to refactor the code
+to get a clear name for our data
+so we can talk about it.
+
+```python
+weather_data = response.json()
+print(weather_data)
+```
+
+What can we do with this now that it's a Python dictionary?
+We can use a pretty printer.
+The standard libary comes with a pretty printer
+called `pprint`.
+Add the `pprint` module to the top of your file.
+
+```python
+import pprint
+```
+
+Change your `print` line to look like:
+
+```python
+pprint.pprint(weather_data)
+```
+
+How does this look?
+
+```bash
+$ python weather_service.py
+{'base': 'cmc stations',
+ 'clouds': {'all': 0},
+ 'cod': 200,
+ 'coord': {'lat': 51.51, 'lon': -0.13},
+ 'dt': 1473640478,
+ 'id': 2643743,
+ 'main': {'humidity': 72,
+          'pressure': 1015,
+          'temp': 286.06,
+          'temp_max': 291.15,
+          'temp_min': 282.04},
+ 'name': 'London',
+ 'sys': {'country': 'GB',
+         'id': 5091,
+         'message': 0.0105,
+         'sunrise': 1473658272,
+         'sunset': 1473704462,
+         'type': 1},
+ 'weather': [{'description': 'clear sky',
+              'icon': '01n',
+              'id': 800,
+              'main': 'Clear'}],
+ 'wind': {'deg': 120, 'speed': 2.1}}
+```
+
+**Yeah, buddy!**
+
+We have a fighting chance of seeing the kind of data
+provided by OpenWeatherMap.
+
+First,
+let's change our location.
+London's cool and all,
+but this is Hack *Frederick*.
+
+```python
+params = {
+    'q': 'Frederick,US',
+    'appid': '<your API key here>',
+}
+```
+
+Second,
+look at the `temp`.
+The high 200s doesn't seem right.
+Jump back to the API documentation
+and you will find information
+about the data format.
+By default,
+OpenWeatherMap reports data
+in Kelvins.
+How, uh, *scientific* of them.
+We need some Imperial units up in here.
+
+![You know dat's right](http://i.giphy.com/QduCyLuNQYwpO.gif)
+
+```python
+params = {
+    'q': 'Frederick,US',
+    'appid': '<your API key here>',
+    'units': 'imperial',
+}
+```
+
+Let's switch gears
+and take a close look at the Nexmo API.
+
+### Nexmo
 
 TODO: Nexmo
 
