@@ -256,7 +256,15 @@ for the amount of data we plan to fetch from the site.
 To use their data,
 you must create an account through their website.
 
-TODO: Nexmo
+The other major component
+is a service to send text messages.
+[Nexmo](https://www.nexmo.com/),
+our sponsor,
+provides such a service
+for us to use.
+
+To send SMS messages,
+you must create an account through their website.
 
 All the data that we are receiving and sending
 is going over the internet.
@@ -286,11 +294,9 @@ An API describes how code can interact
 with external services
 to collect or send data.
 
-[Start with the weather](open_weather_map.md)
+[Start with the weather](open_weather_map.md).
 
-### Nexmo
-
-TODO: Nexmo
+[Then check out Nexmo](nexmo.md).
 
 ## Connecting things together
 
