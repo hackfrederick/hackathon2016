@@ -298,8 +298,6 @@ to collect or send data.
 
 [Then check out Nexmo](nexmo.md).
 
-## Connecting things together
-
-TODO: code
+[Finally, put them together](connecting.md).
 
 ## Next steps
