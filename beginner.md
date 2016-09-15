@@ -301,3 +301,7 @@ to collect or send data.
 [Finally, put them together](connecting.md).
 
 ## Next steps
+
+If you got through everything,
+it's time to kick in some creativity.
+[Grab some ideas and get going](next.md).
