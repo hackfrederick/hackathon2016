@@ -62,21 +62,20 @@ until you learn
 that Python dictionary values do not have to be the same type of data.
 Now is also a good time to observe
 that a Python dictionary value can be **another dictionary**.
+A dictionary that is a value
+of a dictionary
+is often called a *nested* dictionary.
 
 Imagine reading a book
 with a footnote,
 and the footnote says to go read another book
 for a detailed explanation.
 It's kind of like that.
-A dictionary that is a value
-of a dictionary
-is often referred to as a nested dictionary.
 
-A Python dictionary can provide values
-by accessing a key
-like a regular dictionary will give you a definition
-when you look up a word.
-We access by key using square brackets.
+We access data
+in a dictionary
+using square brackets
+and a key.
 
 ```python
 city = weather_data['name']
