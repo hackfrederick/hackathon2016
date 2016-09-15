@@ -44,12 +44,12 @@ $ python weather_service.py
  'wind': {'deg': 20, 'speed': 9.17}}
 ```
 
-That looks somewhat complicated
+That's complicated
 so let's break it down.
-All of the data is wrapped in curly braces.
-That tells us that the entire response
-from the weather service
+The data is wrapped in curly braces
+so that tells us that the entire response
 is a big Python dictionary.
+
 The words along the left side
 are the keys
 for that dictionary.
@@ -60,11 +60,9 @@ But what is going on with the values on the right side?
 It seems to make no sense
 until you learn
 that Python dictionary values do not have to be the same type of data.
-(In fact,
-even the keys do not have to be the same type of data.
-If that's confusing, don't worry about it for now.)
 Now is also a good time to observe
 that a Python dictionary value can be **another dictionary**.
+
 Imagine reading a book
 with a footnote,
 and the footnote says to go read another book
