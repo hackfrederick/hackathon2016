@@ -245,7 +245,7 @@ Version control is a key tool
 for sharing your project
 and protecting it from loss.
 Read about
-[adding version control](version_control.md)
+[adding version control]({{ site.github.url }}/version-control/)
 if you would like.
 
 ## Set up project

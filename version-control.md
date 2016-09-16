@@ -1,3 +1,8 @@
+---
+layout: default
+permalink: /version-control/
+---
+
 ## Add version control to your project
 
 You should know of an important concept called version control.
@@ -15,8 +20,7 @@ To set up Git,
 check out
 [this setup article](https://help.github.com/articles/set-up-git/)
 on GitHub.
-And since we're mentioning GitHub
-(and you're probably reading this on GitHub),
+And since we're mentioning GitHub,
 you should know a little about it.
 GitHub is the most popular place to store Git repositories
 on the internet.
