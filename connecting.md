@@ -153,4 +153,4 @@ Don't you feel super?
 ![Super Duper.](http://i.giphy.com/l2Sq9mzrjHG39i0i4.gif)
 
 What's next?
-[Time to get creative](next.md).
+[Time to get creative]({{ site.github.url }}/next/).
