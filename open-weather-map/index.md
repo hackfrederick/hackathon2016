@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # OpenWeatherMap
 
 We can start
