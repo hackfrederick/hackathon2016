@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Beginner track
 
 This page shows a project
