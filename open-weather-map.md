@@ -356,4 +356,4 @@ What am I doing inside writing this guide!? :wink:
 
 Now let's switch gears
 and
-[take a close look at the Nexmo API](nexmo.md).
+[take a close look at the Nexmo API]({{ site.github.url }}/nexmo/).

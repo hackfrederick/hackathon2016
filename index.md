@@ -298,9 +298,9 @@ An API describes how code can interact
 with external services
 to collect or send data.
 
-[Start with the weather]({{ site.github.url}}/open-weather-map/).
+[Start with the weather]({{ site.github.url }}/open-weather-map/).
 
-[Then check out Nexmo](nexmo.md).
+[Then check out Nexmo]({{ site.github.url }}/nexmo/).
 
 [Finally, put them together](connecting.md).
 

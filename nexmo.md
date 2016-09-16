@@ -1,3 +1,8 @@
+---
+layout: default
+permalink: /nexmo/
+---
+
 # Nexmo
 
 After walking through all the weather service work,
