@@ -75,6 +75,6 @@ after some amount of time.
 
 With that,
 it's time to
-[glue the services together](connecting.md).
+[glue the services together]({{ site.github.url }}/connecting/).
 
 ![Yum.](http://i.giphy.com/bnDMWYC4nzzO0.gif)

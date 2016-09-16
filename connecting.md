@@ -1,3 +1,8 @@
+---
+layout: default
+permalink: /connecting/
+---
+
 # Connecting the services together
 
 It's time to show off your superpowers.

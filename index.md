@@ -302,7 +302,7 @@ to collect or send data.
 
 [Then check out Nexmo]({{ site.github.url }}/nexmo/).
 
-[Finally, put them together](connecting.md).
+[Finally, put them together]({{ site.github.url }}/connecting/).
 
 ## Next steps
 
