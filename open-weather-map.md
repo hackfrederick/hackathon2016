@@ -39,7 +39,7 @@ named `weather_service.py`.
 $ touch weather_service.py
 ```
 
-Open that file in Sublime.
+Open that file in Atom.
 It should be empty.
 The first thing to do is to tell Python
 that we want to use the `requests` package

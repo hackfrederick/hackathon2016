@@ -70,15 +70,15 @@ such simple tools are not well suited
 for software development.
 
 Instead,
-we will use Sublime Text.
-Sublime Text is a powerful text editor
+we will use Atom.
+Atom is a powerful text editor
 meant for people who want to write code.
 It includes great features
 like syntax highlighting
 that will make your work easier.
 
 Download it from the
-[Sublime Text website](https://www.sublimetext.com/)
+[Atom website](https://atom.io/)
 and install it on your machine.
 
 ## Running commands
