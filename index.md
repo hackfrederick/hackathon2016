@@ -119,6 +119,11 @@ to repeat the content inside the quotation marks.
 
 You will see a variety of different commands
 by following this project.
+Occasionally,
+a command or line of code will be wider
+than this webpage permits
+so we will add some extra whitespace
+for those cases.
 
 ## A home for your code
 

@@ -19,8 +19,9 @@ Right from the start,
 Nexmo provides an example command to run.
 
 ```bash
-$ curl "https://rest.nexmo.com/sms/json?api_key=<your key>&api_secret=<your secret>
-&from=<your from number>&to=<your to number>&text=Welcome+to+Nexmo"
+$ curl "https://rest.nexmo.com/sms/json?api_key=<your key>
+&api_secret=<your secret>&from=<your from number>&to=<your to number>
+&text=Welcome+to+Nexmo"
 ```
 
 In this example,

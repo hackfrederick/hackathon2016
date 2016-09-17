@@ -58,7 +58,8 @@ Next, let's tell `requests` to get the data
 from the internet.
 
 ```python
-response = requests.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk')
+response = requests.get(
+    'http://api.openweathermap.org/data/2.5/weather?q=London,uk')
 ```
 
 Now we can run that code.
@@ -94,7 +95,8 @@ Try it again.
 
 ```bash
 $ python weather_service.py
-{"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}
+{"cod":401, "message":
+"Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}
 ```
 
 Huh?
@@ -114,18 +116,21 @@ you can find at
 Now we can change our code to use that key.
 
 ```python
-response = requests.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=<your API key here>')
+response = requests.get(
+    'http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=<your API key here>')
 ```
 
 Try again.
 
 ```bash
 $ python weather_service.py
-{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky",
-"icon":"01n"}],"base":"stations","main":{"temp":286.42,"pressure":1015,"humidity":63,"temp_min":283.15,
-"temp_max":290.15},"visibility":10000,"wind":{"speed":2.1,"deg":190},"clouds":{"all":0},"dt":1473629602,
-"sys":{"type":1,"id":5091,"message":0.0423,"country":"GB","sunrise":1473571860,"sunset":1473618079},
-"id":2643743,"name":"London","cod":200}
+{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear",
+"description":"clear sky","icon":"01n"}],"base":"stations","main":
+{"temp":286.42,"pressure":1015,"humidity":63,"temp_min":283.15,
+"temp_max":290.15},"visibility":10000,"wind":{"speed":2.1,"deg":190},"clouds":
+{"all":0},"dt":1473629602,"sys":{"type":1,"id":5091,"message":0.0423,"country":
+"GB","sunrise":1473571860,"sunset":1473618079},"id":2643743,"name":"London",
+"cod":200}
 ```
 
 **Sweet success!**
@@ -158,7 +163,8 @@ params = {
     'q': 'London,uk',
     'appid': '<your API key here>',
 }
-response = requests.get('http://api.openweathermap.org/data/2.5/weather', params=params)
+response = requests.get(
+    'http://api.openweathermap.org/data/2.5/weather', params=params)
 ```
 
 If you run this again,
@@ -213,12 +219,13 @@ Let's look at the output now:
 
 ```bash
 $ python weather_service.py
-{'cod': 200, 'weather': [{'main': 'Clear', 'description': 'clear sky', 'icon': '01n', 'id': 800}],
- 'id': 2643743, 'name': 'London', 'dt': 1473640478, 'sys': {'country': 'GB', 'type': 1,
- 'sunrise': 1473658272, 'message': 0.0105, 'sunset': 1473704462, 'id': 5091}, 'wind': {'speed':
- 2.1, 'deg': 120}, 'clouds': {'all': 0}, 'coord': {'lon': -0.13, 'lat': 51.51}, 'main':
- {'temp_min': 282.04, 'temp': 286.06, 'humidity': 72, 'pressure': 1015, 'temp_max': 291.15},
- 'base': 'cmc stations'}
+{'cod': 200, 'weather': [{'main': 'Clear', 'description': 'clear sky', 'icon':
+ '01n', 'id': 800}], 'id': 2643743, 'name': 'London', 'dt': 1473640478, 'sys':
+ {'country': 'GB', 'type': 1, 'sunrise': 1473658272, 'message': 0.0105,
+ 'sunset': 1473704462, 'id': 5091}, 'wind': {'speed': 2.1, 'deg': 120},
+ 'clouds': {'all': 0}, 'coord': {'lon': -0.13, 'lat': 51.51}, 'main':
+ {'temp_min': 282.04, 'temp': 286.06, 'humidity': 72, 'pressure': 1015,
+ 'temp_max': 291.15}, 'base': 'cmc stations'}
 ```
 
 What we see still doesn't look very good.
