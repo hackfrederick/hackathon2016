@@ -111,7 +111,7 @@ That FAQ page says
 we need to use `APPID` for access.
 The `APPID` is the key
 you can find at
-[your account's API key page](https://home.openweathermap.org/api_keys).
+[your account's API keys page](https://home.openweathermap.org/api_keys).
 
 Now we can change our code to use that key.
 

@@ -226,6 +226,17 @@ for the amount of data we plan to fetch from the site.
 
 To use their data,
 you must create an account through their website.
+Once you have an account,
+you should have access to
+[your dashboard](https://home.openweathermap.org/).
+The most useful page
+for us
+will be the
+[API keys page](https://home.openweathermap.org/api_keys)
+which we will talk more about later.
+Keys can take some time to generate
+so do not fret
+if they are not quite ready yet.
 
 The other major component
 is a service to send text messages.
@@ -236,6 +247,14 @@ for us to use.
 
 To send SMS messages,
 you must create an account through their website.
+Similarly to OpenWeatherMap,
+you will get access to a
+[dashboard page](https://dashboard.nexmo.com/).
+We'll primarily focus on their
+[Getting Started Guide](https://dashboard.nexmo.com/getting-started-guide),
+but,
+again,
+we'll inspect that closer a bit later.
 
 All the data that we are receiving and sending
 is going over the internet.
