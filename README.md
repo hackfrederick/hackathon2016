@@ -14,4 +14,4 @@ Many other languages would work,
 but that is a language that is known to us and approachable.
 
 To get started,
-[check out the beginner track page](beginner.md).
+[check out the beginner track page](index.md).
