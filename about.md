@@ -4,12 +4,27 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hack Frederick is a group
+of local tech enthusiasts
+in Frederick, Maryland.
+We are interested
+in bringing technology
+to our local community
+to foster a tech culture
+in our beautiful city.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+We have a wide range
+of passions and skills
+that we use to equip
+students,
+hobbyists,
+and other professionals
+with knowledge
+that will help Frederick
+stay relevant
+in an increasingly
+technological world.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Learn more about Hack Frederick
+at
+[our website](http://www.hackfrederick.com/).
