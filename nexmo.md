@@ -13,6 +13,32 @@ will apply here.
 The primary differences are the URL
 and data values to use.
 
+Before starting,
+you may want to "comment out"
+your weather API code.
+Comments start with `#`
+and *anything* can appear
+in a comment line.
+For instance,
+if you had code like
+
+```python
+print('Hello World')
+```
+
+and changed it to
+
+```python
+# print('Hello World')
+```
+
+then that `print` would no longer run
+when you run your code.
+
+By commenting out your weather API code,
+you can stop it from running
+and focus completely on the Nexmo code.
+
 Your Nexmo account will point you to their
 [Getting Started Guide](https://dashboard.nexmo.com/getting-started-guide).
 Right from the start,
