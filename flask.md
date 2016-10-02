@@ -67,3 +67,70 @@ def image():
   image = icon(weather_data['weather'][0]['icon'])
   return Flask.response_class(image, mimetype='image/png')
 ```
+
+You will notice that the weather fuction looks familiar. We are adding a
+path generator that builds a path to pull the openweathermap.org's icon
+image for each weather event. It uses the requests package to pull the image
+and then presents it to the user when the /image route is hit.
+
+To run the app do the following:
+
+```bash
+export FLASK_APP=app.py
+flask run
+```
+
+Open your browser and go to http://localhost:5000
+
+You will see the following.
+
+```json
+{
+  "base": "stations", 
+  "clouds": {
+    "all": 0
+  }, 
+  "cod": 200, 
+  "coord": {
+    "lat": 39.41, 
+    "lon": -77.41
+  }, 
+  "dt": 1475443439, 
+  "id": 4355585, 
+  "main": {
+    "humidity": 71, 
+    "pressure": 1015, 
+    "temp": 294.98, 
+    "temp_max": 296.48, 
+    "temp_min": 293.71
+  }, 
+  "name": "Frederick", 
+  "rain": {
+    "1h": 0.1
+  }, 
+  "sys": {
+    "country": "US", 
+    "id": 9537, 
+    "message": 0.2462, 
+    "sunrise": 1475406482, 
+    "sunset": 1475448501, 
+    "type": 3
+  }, 
+  "time": "Sun, 02 Oct 2016 17:35:21 GMT", 
+  "weather": [
+    {
+      "description": "light rain", 
+      "icon": "10d", 
+      "id": 500, 
+      "main": "Rain"
+    }
+  ], 
+  "wind": {
+    "deg": 201.002, 
+    "speed": 2.05
+  }
+}
+```
+
+Then go to http://localhost:5000/image. You will see a small icon that 
+represents the current weather. 
