@@ -68,7 +68,7 @@ def image():
   return Flask.response_class(image, mimetype='image/png')
 ```
 
-You will notice that the weather fuction looks familiar. We are adding a
+You will notice that the weather function looks familiar. We are adding a
 path generator that builds a path to pull the openweathermap.org's icon
 image for each weather event. It uses the requests package to pull the image
 and then presents it to the user when the /image route is hit.
